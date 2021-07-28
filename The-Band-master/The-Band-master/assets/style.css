@@ -1,0 +1,328 @@
+/* reset css */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* 
+    1: vị tri 
+    2: kích thước 
+    3: màu sắc
+    4: kiểu dáng 
+*/
+
+.text-while {
+    color: #fff;
+}
+.clear{
+    clear: both;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.main {
+}
+
+.header {
+    top: 0;
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    right: 0px;
+    width: 100%;
+}
+
+.nav {
+    font-size: 0;
+    position: relative;
+}
+
+.nav li {
+    list-style: none;
+    display: inline-block;
+}
+.nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+.nav li a {
+    line-height: 46px;
+    padding: 0 24px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.nav li:hover > a {
+    background-color: #ccc;
+    color: #333;
+}
+.nav li:hover .subnav {
+    display: block;
+}
+.subnav {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.subnav li {
+    display: block;
+    min-width: 160px;
+}
+.subnav li a {
+    color: #333;
+}
+
+.nav-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 24px;
+}
+.nav-search:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+/* container */
+.container {
+    margin-top: 46px;
+}
+
+.banner-silder {
+    padding-top: 50%;
+    background: url("/w3-band/assets/img/silder1.jpg") top center / cover no-repeat;
+    position: relative;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 47px;
+    z-index: 1;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.baner-title {
+    margin: 47px 0 15px 0;
+    font-weight: 400;
+    font-size: 25px;
+}
+.baner-text {
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.section {
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 0px;
+    overflow: hidden;
+
+}
+
+.section-header {
+    margin: 10px 0;
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.section-slogan {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    margin: 15px 0;
+}
+
+.section-about {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.member-list {
+    margin-top: 48px;
+    overflow: hidden;
+}
+
+.member-item {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+    margin-bottom: 32px;
+}
+.member-name {
+}
+.member-img {
+    margin-top: 15px;
+    width: 154px;
+}
+/* tour dates */
+.section-tour {
+    background-color: #000;
+}
+.book-tickets {
+}
+
+.book-tickets li {
+    background-color: #fff;
+    padding: 10px 16px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+.Sold-out {
+    background-color: #f44336;
+    padding: 3px 8px;
+    margin-left: 16px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.amount {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -2px;
+    margin-right: 16px;
+}
+.list-tour{
+    margin: 32px -8px 0px ; 
+}
+.list-tour .item-tour{
+    float: left;
+    width: calc(100% / 3);
+    padding: 0px 8px;
+}
+
+.item-tour .tour-img{
+    width: 100%;
+    display: block;
+}
+.item-tour .tour-img:hover{
+    opacity: 0.6;
+}
+.item-tour .tour-body{
+    background-color: #fff;
+    padding: 15px 16px;
+}
+
+.item-tour .tour-title{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.item-tour .tour-date{
+    margin: 15px 0px;
+    opacity: 0.5;
+}
+
+.item-tour .tour-about{
+    line-height: 1.5;
+     margin-bottom: 15px;
+     font-size: 15px;
+}
+.tour-body .tour-body-btn{
+    background-color: #000;
+    color: #fff;
+    padding: 9px 16px;
+    border: 0px;
+    font-size: 15px;
+}
+.tour-body .tour-body-btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+    color: #333;
+}
+/* contact */
+.contact-content{
+    margin-top: 47px ;
+}
+
+.contact-text{
+    width: 50%;
+    float: left;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.contact-text span{
+    margin-left: 16px;
+
+}
+
+.contact-from{
+    width: 50%;
+    float: right;
+    font-size: 18px;
+    line-height: 1.6;
+    position: relative;
+}
+
+.from-sub{
+
+}
+
+.from-name{
+    float: left;
+    width: 50%;
+    padding-right: 8px;
+}
+.from-sub .input{
+    width: 100%;
+    padding: 9px 8px;
+}
+.from-email{
+    float: right;
+    width: 50%;
+    padding-left: 8px;
+}
+.contact-from .Message{
+    width: 100%;
+    padding: 9px 8px;
+    margin-top: 8px;
+}
+.contact-from .Send-btn{
+    padding: 9px 16px;
+    background-color: #000;
+    color: #fff;
+    float: right;
+    right: 0;
+    margin-top: 8px;
+}
+.map{
+    margin-top: 48px;
+    background: url('/w3-band/assets/img/map.jpg') top center / cover no-repeat ;
+    padding-top:50% ;
+}
+
+/* footer */
+.footer{
+    margin: 64px;
+    width:100%;
+    text-align: center;
+}
+.footer i{
+    font-size: 24px;
+    opacity: 0.5;
+}
+.footer i:hover {
+    opacity: 0.5;
+}
+.footer p{
+    margin-top: 14px;
+    opacity: 0.6;
+    font-size: 15px;
+}
