@@ -11,17 +11,55 @@
     3: màu sắc
     4: kiểu dáng 
 */
-
+label{
+    text-decoration: none;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .text-while {
-    color: #fff;
+    color: #fff !important;
+}
+.text-center{
+    text-align: center !important;
 }
 .clear{
     clear: both;
 }
+.text-decoration-line{
+    text-decoration:none !important;
+}
+.open{
+    display: flex !important;
+}
 
-body {
+.row{
+    margin-left:-8px ;
+    margin-right:-8px ;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-third{
+    width: 33.33333%;
+}
+
+.mt-bottom{
+    margin-bottom:16px;
+}
+
+/* main */
+html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    scroll-behavior: smooth;
 }
 .main {
 }
@@ -33,10 +71,11 @@ body {
     position: fixed;
     right: 0px;
     width: 100%;
+    z-index: 100;   
 }
 
 .nav {
-    font-size: 0;
+    font-size: 0;   
     position: relative;
 }
 
@@ -76,7 +115,11 @@ body {
 .subnav li a {
     color: #333;
 }
+.nav-bars{
+    display: none;
+}
 
+.nav-bars,
 .nav-search {
     position: absolute;
     top: 0;
@@ -84,10 +127,15 @@ body {
     color: #fff;
     line-height: 46px;
     padding: 0 24px;
+    float: right;
 }
 .nav-search:hover {
     background-color: red;
     cursor: pointer;
+}
+.nav-bars:hover{
+    background-color: #ccc;
+    color: #333;
 }
 
 /* container */
@@ -97,14 +145,13 @@ body {
 
 .banner-silder {
     padding-top: 50%;
-    background: url("/w3-band/assets/img/silder1.jpg") top center / cover no-repeat;
+    background: url("./img/silder1.jpg") top center / cover no-repeat;
     position: relative;
 }
 
 .banner-text {
     position: absolute;
     bottom: 47px;
-    z-index: 1;
     color: #fff;
     width: 100%;
     text-align: center;
@@ -122,6 +169,8 @@ body {
 
 .section {
     width: 800px;
+    max-width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 64px 0px;
     overflow: hidden;
@@ -146,20 +195,19 @@ body {
     text-align: justify;
     line-height: 1.5;
     font-size: 15px;
+    margin: 16px 0px;
 }
 
 .member-list {
     margin-top: 48px;
-    overflow: hidden;
+    padding-bottom: 15px;
 }
 
 .member-item {
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 15px;
 }
 .member-name {
+    margin-top: 16px;
 }
 .member-img {
     margin-top: 15px;
@@ -170,6 +218,7 @@ body {
     background-color: #000;
 }
 .book-tickets {
+    padding-top: 16px;
 }
 
 .book-tickets li {
@@ -198,13 +247,8 @@ body {
     margin-top: -2px;
     margin-right: 16px;
 }
-.list-tour{
-    margin: 32px -8px 0px ; 
-}
-.list-tour .item-tour{
-    float: left;
-    width: calc(100% / 3);
-    padding: 0px 8px;
+.list-tour{ 
+    margin-top: 32px;
 }
 
 .item-tour .tour-img{
@@ -249,7 +293,7 @@ body {
 }
 /* contact */
 .contact-content{
-    margin-top: 47px ;
+    margin-top: 47px;
 }
 
 .contact-text{
@@ -257,44 +301,41 @@ body {
     float: left;
     font-size: 18px;
     line-height: 1.6;
+    margin-bottom: 15px;
 }
 .contact-text span{
     margin-left: 16px;
 
 }
 
-.contact-from{
+.contact-form{
     width: 50%;
     float: right;
     font-size: 18px;
     line-height: 1.6;
-    position: relative;
 }
 
-.from-sub{
 
-}
-
-.from-name{
+.form-name{
     float: left;
     width: 50%;
     padding-right: 8px;
 }
-.from-sub .input{
+.form-sub .input{
     width: 100%;
     padding: 9px 8px;
 }
-.from-email{
+.form-email{
     float: right;
     width: 50%;
-    padding-left: 8px;
+    padding-left:8px ;
 }
-.contact-from .Message{
+.contact-form .Message{
     width: 100%;
-    padding: 9px 8px;
+    padding: 8px;
     margin-top: 8px;
 }
-.contact-from .Send-btn{
+.contact-form .Send-btn{
     padding: 9px 16px;
     background-color: #000;
     color: #fff;
@@ -302,15 +343,18 @@ body {
     right: 0;
     margin-top: 8px;
 }
+.contact-form [type=text ]{
+    border: 1px solid #ccc;
+}
 .map{
     margin-top: 48px;
-    background: url('/w3-band/assets/img/map.jpg') top center / cover no-repeat ;
+    background: url('./img/map.jpg') top center / cover no-repeat ;
     padding-top:50% ;
 }
 
 /* footer */
 .footer{
-    margin: 64px;
+    margin: 64px 0;
     width:100%;
     text-align: center;
 }
@@ -325,4 +369,79 @@ body {
     margin-top: 14px;
     opacity: 0.6;
     font-size: 15px;
+}
+/* modal */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal-container{
+    background-color:#fff ; 
+    width: 900px;
+    min-height: 250px;
+    position: relative;
+}
+.modal .modal-Header {
+    
+    padding: 45px;
+    background-color: #009688;
+    color: #fff;
+    text-align: center;
+}
+.modal .modal-Header span{
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+.modal .modal-Header i{
+    margin-right: 16px;
+}
+.modal .close{
+    position: absolute;
+    right: 0;
+    color: #000;
+    z-index: 1;
+    padding:16px;
+    color: #fff;
+}
+.modal-body{
+    padding: 16px;
+}
+.modal .close:hover{
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer;
+}
+.modal-body i{
+    margin-right: 5px;
+    margin: 15px 0; 
+}
+.modal-body input{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+.modal-body button{
+    width: 100%;
+    background-color:#009688 ;
+    border: none;
+    margin: 16px 0;
+    color: #fff;
+}
+.modal-body button:hover{
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer;
+}
+.modal-footer{
+    float: right;
+    margin: 16px 0;
+    color: #333;
 }

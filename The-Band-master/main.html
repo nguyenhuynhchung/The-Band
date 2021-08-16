@@ -6,20 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/reponsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <title>Document</title>
 
 </head>
 
 <body>
+    
     <div class="main">
         <!-- header -->
         <div class="header">
             <ul class="nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Band</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a href="#">More <i class="fas fa-caret-down"></i></a>
                     <ul class="subnav">
@@ -31,6 +33,9 @@
             </ul>
             <div class="nav-search">
                 <i class="fas fa-search"></i>
+            </div>
+            <div class="nav-bars">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
         <!-- end header -->
@@ -44,28 +49,28 @@
                 </div>
             </div>
             <!-- the band -->
-            <div class="section">
+            <div class="section" id="band">
                 <h2 class="section-header">THE BAND</h2>
                 <div class="section-slogan">We love music</div>
                 <div class="section-about">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                <div class="member-list">
-                    <div class="member-item">
+                <div class="row member-list">
+                    <div class="col s-col-full col-third s-col text-center member-item">
                         <div class="member-name">Name</div>
-                        <img src="/w3-band/assets/img/add1.jpg" alt="Name" class="member-img">
+                        <img src="assets/img/add1.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col s-col-full col-third text-center member-item">
                         <div class="member-name">Name</div>
-                        <img src="/w3-band/assets/img/add1.jpg" alt="Name" class="member-img">
+                        <img src="assets/img/add1.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col s-col-full col-third text-center member-item">
                         <div class="member-name">Name</div>
-                        <img src="/w3-band/assets/img/add1.jpg" alt="Name" class="member-img">
+                        <img src="assets/img/add1.jpg" alt="Name" class="member-img">
                     </div>
                 </div>
             </div>
 
             <!-- tour dates -->
-            <div class="section-tour">
+            <div class="section-tour" id="tour">
                 <div class="section">
                     <h2 class="section-header text-while">TOUR DATES</h2>
                     <div class="section-slogan text-while">Remember to book your tickets!</div>
@@ -73,35 +78,34 @@
                         <li>September  <span class="Sold-out">Sold out</span></li>
                         <li>October   <span class="Sold-out">Sold out</span></li>
                         <li>November <span class="amount">3</span></li>
-                        <div class="list-tour">
-                            <div class="item-tour">
-                                <img src="/w3-band/assets/img/tour1.jpg" alt="" class="tour-img">
+                        <div class="row list-tour">
+                            <div class="col s-col-full col-third item-tour mt-bottom">
+                                <img src="assets/img/tour1.jpg" alt="" class="tour-img">
                                 <div class="tour-body">
                                     <div class="tour-title">New York</div>
                                     <div class="tour-date">Fri 27 Nov 2016</div>
                                     <div class="tour-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                    <input type="submit" value="Buy Tickets" class="tour-body-btn">
+                                    <input type="submit" value="Buy Tickets" class="tour-body-btn js-Buy-Tickets text-center s-width-full">
                                 </div>
                             </div>
-                            <div class="item-tour">
-                                <img src="/w3-band/assets/img/tour2.jpg" alt="" class="tour-img">
+                            <div class="col s-col-full col-third  item-tour mt-bottom">
+                                <img src="assets/img/tour2.jpg" alt="" class="tour-img">
                                 <div class="tour-body">
                                     <div class="tour-title">Paris</div>
                                     <div class="tour-date">Sat 28 Nov 2016</div>
                                     <div class="tour-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                    <input type="submit" value="Buy Tickets"class="tour-body-btn">
+                                    <input type="submit" value="Buy Tickets"class="tour-body-btn js-Buy-Tickets text-center s-width-full">
                                 </div>
                             </div>
-                            <div class="item-tour">
-                                <img src="/w3-band/assets/img/tour3.jpg" alt="" class="tour-img">
+                            <div class="col s-col-full col-third  item-tour mt-bottom">
+                                <img src="assets/img/tour3.jpg" alt="" class="tour-img">
                                 <div class="tour-body">
                                     <div class="tour-title">San Francisco</div>
                                     <div class="tour-date">Sun 29 Nov 2016</div>
                                     <div class="tour-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</div>
-                                    <input type="submit" value="Buy Tickets"class="tour-body-btn">
+                                    <input type="submit" value="Buy Tickets"class="tour-body-btn js-Buy-Tickets text-center s-width-full">
                                 </div>
                             </div>
-                            <div class="clear"></div>
                         </div>
 
                     </ul>
@@ -109,22 +113,22 @@
             </div>
         
             <!-- contact-->
-            <div class="section">
+            <div class="section" id="contact">
                 <h2 class="section-header">CONTACT</h2>
                 <div class="section-slogan">Fan? Drop a note!</div>
                 <div class="contact-content">
-                    <div class="contact-text">
+                    <div class="contact-text s-col-full ">
                         <i class="fas fa-map-marker-alt"></i> <span>Chicago, US</span><br>
                         <i class="fas fa-phone-alt"></i> <span>Phone: +00 151515</span><br>
                         <i class="fas fa-envelope"></i> <span>Email: mail@mail.com</span>
                     </div>
-                    <div class="contact-from">
-                        <div class="from-sub">
-                            <div class="from-name"> <input type="text" placeholder="Name" class="input"></div>
-                            <div class="from-email"><input type="text"placeholder="Email" class="input"></div>
+                    <div class="contact-form s-col-full ">
+                        <div class="form-sub">
+                            <div class="form-name s-col-full s-form__input"> <input type="text" placeholder="Name" class="input "></div>
+                            <div class="form-email s-col-full s-form__input"><input type="text"placeholder="Email" class="input "></div>
                         </div>
-                        <input type="text" placeholder="Message" class="Message"><br>
-                        <input type="submit" value="SEND" class="Send-btn">
+                        <input type="text" placeholder="Message" class="Message "><br>
+                        <input type="submit" value="SEND" class="Send-btn s-width-full">
                         <div class="clear"></div>
                     </div>
                     <div class="clear"></div>
@@ -148,6 +152,93 @@
         </div>
         <!-- end footer -->
     </div>
+    <div class="modal ">
+        <div class="modal-container js-modalContainer">
+            <div class="close js-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-Header">
+                <i class="fas fa-suitcase" style="font-size: 28px;"></i><span>Tickets</pan>  
+            </div>
+            <div class="modal-body">
+                <label for="">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Tickets, $15 per person</span>
+                </label><br>
+                <input type="text"  placeholder="How many?" class="how-many"><br>
+                <label for="">
+                    <i class="fas fa-user"></i>
+                    <span>Send To</span>
+                </label>
+                <input type="text"  class="enter-email" placeholder="Enter Email">
+                <button class="pay">PAY<i class="fas fa-check"></i></button>
+                <p class="modal-footer">Need <a href="#">help?</a></p>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const buyBtns = document.querySelectorAll('.js-Buy-Tickets')
+        const modal = document.querySelector('.modal')
+        const close = document.querySelector('.js-close')
+        const modalContainer = document.querySelector('.js-modalContainer')
+        
+        // hàm khi thêm class vào
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+        // hàm close moal 
+        function closeModal() {
+            modal.classList.remove('open')
+        }
+        // Sự kiện khi click vào buyBtn thì hiện modal
+        for (const buyBtn of buyBtns ){
+            buyBtn.addEventListener('click', showBuyTickets)
+        }  
+        close.addEventListener('click', closeModal)
+        modal.addEventListener('click',closeModal)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+
+
+    </script>
+
+
+    <!-- hien header -->
+    <script>
+        var header = document.querySelector('.header');
+        var navBars = document.querySelector('.nav-bars');
+        var headerHeight = header.clientHeight;
+        navBars.onclick = function () {
+           var isClose = header.clientHeight === headerHeight;
+           if (isClose){
+                header.style.height ='auto';
+           }  else{
+               header.style.height = null;
+           }
+
+        }
+
+
+        var menuItems = document.querySelectorAll('.nav li a[href*="#"]')
+        for(var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            console.log(this);
+            menuItem.onclick = function(event){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains ('subnav');
+                if(!isParentMenu){
+                    header.style.height = null;
+                }else{
+                    event.preventDefault();
+                }
+                    
+                }
+        }   
+
+        
+    </script>
+   
 </body>
 
 </html>
